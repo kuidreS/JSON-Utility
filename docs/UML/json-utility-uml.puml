@@ -1,0 +1,93 @@
+@startuml
+
+package "com.vserdiuk.json.utility" {
+  class JsonUtilityApplication {
+    +main(args: String[]): void
+  }
+}
+
+package "com.vserdiuk.json.utility.service" {
+  interface JsonService {
+    +validateJson(json: String): boolean
+    +prettyPrintJson(json: String): String
+    +mergeJson(json1: String, json2: String): String
+    +validateJsonWithSchema(json: String, schema: String): boolean
+    +minifyJson(json: String): String
+    +sortJson(json: String, sortByField: String): String
+    +findInJson(json: String, searchTerm: String): List<String>
+    +convertJsonToCsv(json: String): String
+    +convertCsvToJson(csv: String): String
+    +convertJsonToXml(json: String): String
+    +convertXmlToJson(xml: String): String
+    +convertJsonToExcel(json: String): String
+    +convertExcelToJson(base64Excel: String): String
+    +convertJsonToYaml(json: String): String
+    +convertYamlToJson(yaml: String): String
+    +generateTypeDefinitionsFromJson(json: String): String
+  }
+}
+
+package "com.vserdiuk.json.utility.service.impl" {
+  class JsonServiceImpl {
+    -objectMapper: ObjectMapper
+    -prettyPrinter: ObjectWriter
+    +validateJson(json: String): boolean
+    +prettyPrintJson(json: String): String
+    +mergeJson(json1: String, json2: String): String
+    +validateJsonWithSchema(json: String, schema: String): boolean
+    +minifyJson(json: String): String
+    +sortJson(json: String, sortByField: String): String
+    +findInJson(json: String, searchTerm: String): List<String>
+    +convertJsonToCsv(json: String): String
+    +convertCsvToJson(csv: String): String
+    +convertJsonToXml(json: String): String
+    +convertXmlToJson(xml: String): String
+    +convertJsonToExcel(json: String): String
+    +convertExcelToJson(base64Excel: String): String
+    +convertJsonToYaml(json: String): String
+    +convertYamlToJson(yaml: String): String
+    +generateTypeDefinitionsFromJson(json: String): String
+    -generateTypeScriptDefinitionRecursive(typeName: String, node: JsonNode, indent: int, output: StringBuilder, generatedTypes: Set<String>): void
+    -determineTypeScriptType(node: JsonNode, typeName: String): String
+    -capitalize(str: String): String
+    -getRecordsList(sheet: Sheet, headers: List<String>): List<Map<String, String>>
+    -getHeaders(headerRow: Row): List<String>
+    -getCellValueAsString(cell: Cell): String
+    -mergeJsonNodes(mainNode: JsonNode, updateNode: JsonNode): JsonNode
+    -convertCsvToJsonString(csvFormat: CSVFormat, reader: StringReader): String
+    -getCsvWriter(fieldNames: Set<String>, jsonNode: JsonNode): StringWriter
+    -getFieldNames(jsonNode: JsonNode): Set<String>
+    -findInJsonRecursive(node: JsonNode, currentPath: String, searchTerm: String, matches: List<String>): void
+    -sortJsonNode(node: JsonNode, sortByField: String): JsonNode
+    -createHeaderRow(sheet: Sheet, fieldNames: Set<String>): void
+    -fillDataRows(jsonNode: JsonNode, sheet: Sheet, fieldNames: Set<String>): void
+    -writeWorkbookToStream(workbook: Workbook): ByteArrayOutputStream
+  }
+}
+
+package "com.vserdiuk.json.utility.controller" {
+  class JsonController {
+    -jsonService: JsonService
+    +validateJson(json: String): ResponseEntity<Boolean>
+    +prettyPrintJson(json: String): ResponseEntity<String>
+    +mergeJson(jsonList: List<String>): ResponseEntity<String>
+    +validateJsonWithSchema(schema: String, json: String): ResponseEntity<Boolean>
+    +minifyJson(json: String): ResponseEntity<String>
+    +sortJson(sortByField: String, json: String): ResponseEntity<String>
+    +findInJson(searchTerm: String, json: String): ResponseEntity<List<String>>
+    +convertJsonToCsv(json: String): ResponseEntity<String>
+    +convertCsvToJson(csv: String): ResponseEntity<String>
+    +convertJsonToXml(json: String): ResponseEntity<String>
+    +convertXmlToJson(xml: String): ResponseEntity<String>
+    +convertJsonToExcel(json: String): ResponseEntity<String>
+    +convertExcelToJson(base64Excel: String): ResponseEntity<String>
+    +convertJsonToYaml(json: String): ResponseEntity<String>
+    +convertYamlToJson(yaml: String): ResponseEntity<String>
+    +generateTypeDefinitions(json: String): ResponseEntity<String>
+  }
+}
+
+JsonService <|.. JsonServiceImpl
+JsonController --> JsonService : depends on
+
+@enduml

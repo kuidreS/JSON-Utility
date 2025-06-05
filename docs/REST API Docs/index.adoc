@@ -1,0 +1,376 @@
+= JSON Utility API Documentation
+:toc:
+:toc-title: Table of Contents
+:sectnums:
+
+== Overview
+
+JSON Utility application provides REST API endpoints for main JSON operations, such as:
+
+* Validate JSON
+* Merge two JSONs
+* Sort JSON
+* Search in JSON
+* Generate Type Definition
+* JSON Pretty Print
+* Validate JSON Schema
+* Convert JSON to CSV
+* Convert CSV to JSON
+* Convert JSON to EXCEL
+* Convert EXCEL to JSON
+* Convert JSON to XML
+* Convert XML to JSON
+* Convert JSON to YML
+* Convert YML to JSON
+
+== Convert JSON to CSV
+
+REST API endpoint for converting a JSON to CSV format.
+
+=== CURL Request
+include::{snippets}/convert-json-to-csv/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/convert-json-to-csv/http-request.adoc[]
+
+=== Request Headers
+include::{snippets}/convert-json-to-csv/request-headers.adoc[]
+
+=== Request Body
+include::{snippets}/convert-json-to-csv/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/convert-json-to-csv/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/convert-json-to-csv/response-body.adoc[]
+
+== Convert CSV to JSON
+
+REST API endpoint for converting a CSV string to a JSON.
+
+=== CURL Request
+include::{snippets}/convert-csv-to-json/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/convert-csv-to-json/http-request.adoc[]
+
+=== Request Headers
+include::{snippets}/convert-csv-to-json/request-headers.adoc[]
+
+=== Request Body
+include::{snippets}/convert-csv-to-json/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/convert-csv-to-json/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/convert-csv-to-json/response-body.adoc[]
+
+== Convert JSON to EXCEL
+
+REST API endpoint for converting a JSON to a Base64-encoded Excel file.
+
+=== CURL Request
+include::{snippets}/convert-json-to-excel/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/convert-json-to-excel/http-request.adoc[]
+
+=== Request Headers
+include::{snippets}/convert-json-to-excel/request-headers.adoc[]
+
+=== Request Body
+include::{snippets}/convert-json-to-excel/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/convert-json-to-excel/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/convert-json-to-excel/response-body.adoc[]
+
+== Convert EXCEL to JSON
+
+REST API endpoint for converting a Base64-encoded Excel file to a JSON.
+
+=== CURL Request
+include::{snippets}/convert-excel-to-json/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/convert-excel-to-json/http-request.adoc[]
+
+=== Request Headers
+include::{snippets}/convert-excel-to-json/request-headers.adoc[]
+
+=== Request Body
+include::{snippets}/convert-excel-to-json/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/convert-excel-to-json/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/convert-excel-to-json/response-body.adoc[]
+
+== Convert JSON to XML
+
+REST API endpoint for converting a JSON to XML.
+
+=== CURL Request
+include::{snippets}/convert-json-to-xml/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/convert-json-to-xml/http-request.adoc[]
+
+=== Request Headers
+include::{snippets}/convert-json-to-xml/request-headers.adoc[]
+
+=== Request Body
+include::{snippets}/convert-json-to-xml/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/convert-json-to-xml/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/convert-json-to-xml/response-body.adoc[]
+
+== Convert XML to JSON
+
+REST API endpoint for converting XML to a JSON
+
+=== CURL Request
+include::{snippets}/convert-xml-to-json/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/convert-xml-to-json/http-request.adoc[]
+
+=== Request Headers
+include::{snippets}/convert-xml-to-json/request-headers.adoc[]
+
+=== Request Body
+include::{snippets}/convert-xml-to-json/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/convert-xml-to-json/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/convert-xml-to-json/response-body.adoc[]
+
+== Convert JSON to YML
+
+REST API endpoint for converting a JSON to YML.
+
+=== CURL Request
+include::{snippets}/convert-json-to-yaml/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/convert-json-to-yaml/http-request.adoc[]
+
+=== Request Headers
+include::{snippets}/convert-json-to-yaml/request-headers.adoc[]
+
+=== Request Body
+include::{snippets}/convert-json-to-yaml/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/convert-json-to-yaml/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/convert-json-to-yaml/response-body.adoc[]
+
+== Convert YML to JSON
+
+REST API endpoint for converting YML to JSON.
+
+=== CURL Request
+include::{snippets}/convert-yaml-to-json/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/convert-yaml-to-json/http-request.adoc[]
+
+=== Request Headers
+include::{snippets}/convert-yaml-to-json/request-headers.adoc[]
+
+=== Request Body
+include::{snippets}/convert-yaml-to-json/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/convert-yaml-to-json/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/convert-yaml-to-json/response-body.adoc[]
+
+== Search in JSON
+
+REST API endpoint for searching in JSON.
+
+=== CURL Request
+include::{snippets}/find-in-json/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/find-in-json/http-request.adoc[]
+
+=== Request Headers
+include::{snippets}/find-in-json/request-headers.adoc[]
+
+=== Request Body
+include::{snippets}/find-in-json/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/find-in-json/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/find-in-json/response-body.adoc[]
+
+== Generate Type Definition
+
+REST API endpoint for creating JSON type definition
+
+=== CURL Request
+include::{snippets}/generate-type-difinition/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/generate-type-difinition/http-request.adoc[]
+
+=== Request Headers
+include::{snippets}/generate-type-difinition/request-headers.adoc[]
+
+=== Request Body
+include::{snippets}/generate-type-difinition/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/generate-type-difinition/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/generate-type-difinition/response-body.adoc[]
+
+== JSON Pretty Print
+
+REST API endpoint for pretty printing JSON
+
+=== CURL Request
+include::{snippets}/json-pretty-print/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/json-pretty-print/http-request.adoc[]
+
+=== Request Headers
+include::{snippets}/json-pretty-print/request-headers.adoc[]
+
+=== Request Body
+include::{snippets}/json-pretty-print/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/json-pretty-print/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/json-pretty-print/response-body.adoc[]
+
+== Validate JSON Schema
+
+REST API endpoint for validating JSON schema
+
+=== CURL Request
+include::{snippets}/json-validate-schema/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/json-validate-schema/http-request.adoc[]
+
+=== Request Headers
+include::{snippets}/json-validate-schema/request-headers.adoc[]
+
+=== Request Body
+include::{snippets}/json-validate-schema/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/json-validate-schema/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/json-validate-schema/response-body.adoc[]
+
+== Merge two JSONs
+
+REST API endpoint for merging two JSONs
+
+=== CURL Request
+include::{snippets}/merge-jsons/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/merge-jsons/http-request.adoc[]
+
+=== Request Headers
+include::{snippets}/merge-jsons/request-headers.adoc[]
+
+=== Request Body
+include::{snippets}/merge-jsons/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/merge-jsons/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/merge-jsons/response-body.adoc[]
+
+== Minimize JSON
+
+REST API endpoint for minimizing JSON
+
+=== CURL Request
+include::{snippets}/minimize-json/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/minimize-json/http-request.adoc[]
+
+=== Request Headers
+include::{snippets}/minimize-json/request-headers.adoc[]
+
+=== Request Body
+include::{snippets}/minimize-json/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/minimize-json/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/minimize-json/response-body.adoc[]
+
+== Sort JSON
+
+REST API endpoint for sorting JSON
+
+=== CURL Request
+include::{snippets}/sort-json/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/sort-json/http-request.adoc[]
+
+=== Request Headers
+include::{snippets}/sort-json/request-headers.adoc[]
+
+=== Request Body
+include::{snippets}/sort-json/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/sort-json/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/sort-json/response-body.adoc[]
+
+== Validate JSON
+
+REST API endpoint for validating JSON
+
+=== CURL Request
+include::{snippets}/validate-json/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/validate-json/http-request.adoc[]
+
+=== Request Headers
+include::{snippets}/validate-json/request-headers.adoc[]
+
+=== Request Body
+include::{snippets}/validate-json/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/validate-json/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/validate-json/response-body.adoc[]
